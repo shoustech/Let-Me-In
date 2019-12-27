@@ -1,0 +1,11 @@
+{
+  "name": "let-me-in",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/shoustech/Let-Me-In.git",
+  "author": "Shawn Houston",
+  "license": "apache2",
+  "dependencies": {
+    "hapi": "^18.1.0"
+  }
+}
