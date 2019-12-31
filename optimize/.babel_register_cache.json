@@ -1,0 +1,134 @@
+{
+  "{\"sourceRoot\":\"/git/Let-Me-In/src/setup_node_env/babel_register\",\"babelrc\":false,\"caller\":{\"name\":\"@babel/register\"},\"cwd\":\"/git/Let-Me-In\",\"filename\":\"/git/Let-Me-In/src/setup_node_env/babel_register/polyfill.js\",\"configFile\":false,\"passPerPreset\":false,\"envName\":\"development\",\"root\":\"/git/Let-Me-In\",\"plugins\":[],\"presets\":[]}:7.7.7": {
+    "metadata": {},
+    "options": {
+      "sourceRoot": "/git/Let-Me-In/src/setup_node_env/babel_register",
+      "babelrc": false,
+      "caller": {
+        "name": "@babel/register"
+      },
+      "cwd": "/git/Let-Me-In",
+      "filename": "/git/Let-Me-In/src/setup_node_env/babel_register/polyfill.js",
+      "configFile": false,
+      "envName": "development",
+      "root": "/git/Let-Me-In",
+      "sourceMaps": "both",
+      "ast": false,
+      "passPerPreset": false,
+      "plugins": [],
+      "presets": [],
+      "parserOpts": {
+        "sourceType": "module",
+        "sourceFileName": "/git/Let-Me-In/src/setup_node_env/babel_register/polyfill.js",
+        "plugins": []
+      },
+      "generatorOpts": {
+        "filename": "/git/Let-Me-In/src/setup_node_env/babel_register/polyfill.js",
+        "comments": true,
+        "compact": "auto",
+        "sourceMaps": "both",
+        "sourceRoot": "/git/Let-Me-In/src/setup_node_env/babel_register",
+        "sourceFileName": "polyfill.js"
+      }
+    },
+    "ast": null,
+    "code": "/*\n * Licensed to Elasticsearch B.V. under one or more contributor\n * license agreements. See the NOTICE file distributed with\n * this work for additional information regarding copyright\n * ownership. Elasticsearch B.V. licenses this file to you under\n * the Apache License, Version 2.0 (the \"License\"); you may\n * not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n *\n *    http://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing,\n * software distributed under the License is distributed on an\n * \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\n * KIND, either express or implied.  See the License for the\n * specific language governing permissions and limitations\n * under the License.\n */\n// `@babel/preset-env` looks for and rewrites the following import\n// statement into a list of import statements based on the polyfills\n// necessary for our target environment (the current version of node)\n// but since it does that during compilation, `import 'core-js/stable'`\n// must be in a file that is loaded with `require()` AFTER `@babel/register`\n// is configured.\n//\n// This is why we have this single statement in it's own file and require\n// it from ./index.js\nrequire('core-js/stable');\n\nrequire('regenerator-runtime/runtime');\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBvbHlmaWxsLmpzIl0sIm5hbWVzIjpbInJlcXVpcmUiXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFtQkE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0FBLE9BQU8sQ0FBQyxnQkFBRCxDQUFQOztBQUNBQSxPQUFPLENBQUMsNkJBQUQsQ0FBUCIsInNvdXJjZVJvb3QiOiIvZ2l0L0xldC1NZS1Jbi9zcmMvc2V0dXBfbm9kZV9lbnYvYmFiZWxfcmVnaXN0ZXIiLCJzb3VyY2VzQ29udGVudCI6WyIvKlxuICogTGljZW5zZWQgdG8gRWxhc3RpY3NlYXJjaCBCLlYuIHVuZGVyIG9uZSBvciBtb3JlIGNvbnRyaWJ1dG9yXG4gKiBsaWNlbnNlIGFncmVlbWVudHMuIFNlZSB0aGUgTk9USUNFIGZpbGUgZGlzdHJpYnV0ZWQgd2l0aFxuICogdGhpcyB3b3JrIGZvciBhZGRpdGlvbmFsIGluZm9ybWF0aW9uIHJlZ2FyZGluZyBjb3B5cmlnaHRcbiAqIG93bmVyc2hpcC4gRWxhc3RpY3NlYXJjaCBCLlYuIGxpY2Vuc2VzIHRoaXMgZmlsZSB0byB5b3UgdW5kZXJcbiAqIHRoZSBBcGFjaGUgTGljZW5zZSwgVmVyc2lvbiAyLjAgKHRoZSBcIkxpY2Vuc2VcIik7IHlvdSBtYXlcbiAqIG5vdCB1c2UgdGhpcyBmaWxlIGV4Y2VwdCBpbiBjb21wbGlhbmNlIHdpdGggdGhlIExpY2Vuc2UuXG4gKiBZb3UgbWF5IG9idGFpbiBhIGNvcHkgb2YgdGhlIExpY2Vuc2UgYXRcbiAqXG4gKiAgICBodHRwOi8vd3d3LmFwYWNoZS5vcmcvbGljZW5zZXMvTElDRU5TRS0yLjBcbiAqXG4gKiBVbmxlc3MgcmVxdWlyZWQgYnkgYXBwbGljYWJsZSBsYXcgb3IgYWdyZWVkIHRvIGluIHdyaXRpbmcsXG4gKiBzb2Z0d2FyZSBkaXN0cmlidXRlZCB1bmRlciB0aGUgTGljZW5zZSBpcyBkaXN0cmlidXRlZCBvbiBhblxuICogXCJBUyBJU1wiIEJBU0lTLCBXSVRIT1VUIFdBUlJBTlRJRVMgT1IgQ09ORElUSU9OUyBPRiBBTllcbiAqIEtJTkQsIGVpdGhlciBleHByZXNzIG9yIGltcGxpZWQuICBTZWUgdGhlIExpY2Vuc2UgZm9yIHRoZVxuICogc3BlY2lmaWMgbGFuZ3VhZ2UgZ292ZXJuaW5nIHBlcm1pc3Npb25zIGFuZCBsaW1pdGF0aW9uc1xuICogdW5kZXIgdGhlIExpY2Vuc2UuXG4gKi9cblxuLy8gYEBiYWJlbC9wcmVzZXQtZW52YCBsb29rcyBmb3IgYW5kIHJld3JpdGVzIHRoZSBmb2xsb3dpbmcgaW1wb3J0XG4vLyBzdGF0ZW1lbnQgaW50byBhIGxpc3Qgb2YgaW1wb3J0IHN0YXRlbWVudHMgYmFzZWQgb24gdGhlIHBvbHlmaWxsc1xuLy8gbmVjZXNzYXJ5IGZvciBvdXIgdGFyZ2V0IGVudmlyb25tZW50ICh0aGUgY3VycmVudCB2ZXJzaW9uIG9mIG5vZGUpXG4vLyBidXQgc2luY2UgaXQgZG9lcyB0aGF0IGR1cmluZyBjb21waWxhdGlvbiwgYGltcG9ydCAnY29yZS1qcy9zdGFibGUnYFxuLy8gbXVzdCBiZSBpbiBhIGZpbGUgdGhhdCBpcyBsb2FkZWQgd2l0aCBgcmVxdWlyZSgpYCBBRlRFUiBgQGJhYmVsL3JlZ2lzdGVyYFxuLy8gaXMgY29uZmlndXJlZC5cbi8vXG4vLyBUaGlzIGlzIHdoeSB3ZSBoYXZlIHRoaXMgc2luZ2xlIHN0YXRlbWVudCBpbiBpdCdzIG93biBmaWxlIGFuZCByZXF1aXJlXG4vLyBpdCBmcm9tIC4vaW5kZXguanNcbnJlcXVpcmUoJ2NvcmUtanMvc3RhYmxlJyk7XG5yZXF1aXJlKCdyZWdlbmVyYXRvci1ydW50aW1lL3J1bnRpbWUnKTtcblxuIl19",
+    "map": {
+      "version": 3,
+      "sources": [
+        "polyfill.js"
+      ],
+      "names": [
+        "require"
+      ],
+      "mappings": "AAAA;;;;;;;;;;;;;;;;;;AAmBA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACAA,OAAO,CAAC,gBAAD,CAAP;;AACAA,OAAO,CAAC,6BAAD,CAAP",
+      "sourceRoot": "/git/Let-Me-In/src/setup_node_env/babel_register",
+      "sourcesContent": [
+        "/*\n * Licensed to Elasticsearch B.V. under one or more contributor\n * license agreements. See the NOTICE file distributed with\n * this work for additional information regarding copyright\n * ownership. Elasticsearch B.V. licenses this file to you under\n * the Apache License, Version 2.0 (the \"License\"); you may\n * not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n *\n *    http://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing,\n * software distributed under the License is distributed on an\n * \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\n * KIND, either express or implied.  See the License for the\n * specific language governing permissions and limitations\n * under the License.\n */\n\n// `@babel/preset-env` looks for and rewrites the following import\n// statement into a list of import statements based on the polyfills\n// necessary for our target environment (the current version of node)\n// but since it does that during compilation, `import 'core-js/stable'`\n// must be in a file that is loaded with `require()` AFTER `@babel/register`\n// is configured.\n//\n// This is why we have this single statement in it's own file and require\n// it from ./index.js\nrequire('core-js/stable');\nrequire('regenerator-runtime/runtime');\n\n"
+      ]
+    },
+    "sourceType": "module",
+    "mtime": 1577761318119
+  },
+  "{\"sourceRoot\":\"/git/Let-Me-In/src/cli\",\"babelrc\":false,\"caller\":{\"name\":\"@babel/register\"},\"cwd\":\"/git/Let-Me-In\",\"filename\":\"/git/Let-Me-In/src/cli/cli.js\",\"configFile\":false,\"passPerPreset\":false,\"envName\":\"development\",\"root\":\"/git/Let-Me-In\",\"plugins\":[],\"presets\":[]}:7.7.7": {
+    "metadata": {},
+    "options": {
+      "sourceRoot": "/git/Let-Me-In/src/cli",
+      "babelrc": false,
+      "caller": {
+        "name": "@babel/register"
+      },
+      "cwd": "/git/Let-Me-In",
+      "filename": "/git/Let-Me-In/src/cli/cli.js",
+      "configFile": false,
+      "envName": "development",
+      "root": "/git/Let-Me-In",
+      "sourceMaps": "both",
+      "ast": false,
+      "passPerPreset": false,
+      "plugins": [],
+      "presets": [],
+      "parserOpts": {
+        "sourceType": "module",
+        "sourceFileName": "/git/Let-Me-In/src/cli/cli.js",
+        "plugins": []
+      },
+      "generatorOpts": {
+        "filename": "/git/Let-Me-In/src/cli/cli.js",
+        "comments": true,
+        "compact": "auto",
+        "sourceMaps": "both",
+        "sourceRoot": "/git/Let-Me-In/src/cli",
+        "sourceFileName": "cli.js"
+      }
+    },
+    "ast": null,
+    "code": "/*\n * Licensed to Elasticsearch B.V. under one or more contributor\n * license agreements. See the NOTICE file distributed with\n * this work for additional information regarding copyright\n * ownership. Elasticsearch B.V. licenses this file to you under\n * the Apache License, Version 2.0 (the \"License\"); you may\n * not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n *\n *    http://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing,\n * software distributed under the License is distributed on an\n * \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\n * KIND, either express or implied.  See the License for the\n * specific language governing permissions and limitations\n * under the License.\n */\nimport _ from 'lodash';\nimport { pkg } from '../legacy/utils';\nimport Command from './command';\nimport serveCommand from './serve/serve';\nconst argv = process.env.kbnWorkerArgv ? JSON.parse(process.env.kbnWorkerArgv) : process.argv.slice();\nconst program = new Command('bin/kibana');\nprogram.version(pkg.version).description('Kibana is an open source (Apache Licensed), browser ' + 'based analytics and search dashboard for Elasticsearch.'); // attach commands\n\nserveCommand(program);\nprogram.command('help <command>').description('Get the help for a specific command').action(function (cmdName) {\n  const cmd = _.find(program.commands, {\n    _name: cmdName\n  });\n\n  if (!cmd) return program.error(`unknown command ${cmdName}`);\n  cmd.help();\n});\nprogram.command('*', null, {\n  noHelp: true\n}).action(function (cmd) {\n  program.error(`unknown command ${cmd}`);\n}); // check for no command name\n\nconst subCommand = argv[2] && !String(argv[2][0]).match(/^-|^\\.|\\//);\n\nif (!subCommand) {\n  if (_.intersection(argv.slice(2), ['-h', '--help']).length) {\n    program.defaultHelp();\n  } else {\n    argv.splice(2, 0, ['serve']);\n  }\n}\n\nprogram.parse(argv);\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNsaS5qcyJdLCJuYW1lcyI6WyJfIiwicGtnIiwiQ29tbWFuZCIsInNlcnZlQ29tbWFuZCIsImFyZ3YiLCJwcm9jZXNzIiwiZW52Iiwia2JuV29ya2VyQXJndiIsIkpTT04iLCJwYXJzZSIsInNsaWNlIiwicHJvZ3JhbSIsInZlcnNpb24iLCJkZXNjcmlwdGlvbiIsImNvbW1hbmQiLCJhY3Rpb24iLCJjbWROYW1lIiwiY21kIiwiZmluZCIsImNvbW1hbmRzIiwiX25hbWUiLCJlcnJvciIsImhlbHAiLCJub0hlbHAiLCJzdWJDb21tYW5kIiwiU3RyaW5nIiwibWF0Y2giLCJpbnRlcnNlY3Rpb24iLCJsZW5ndGgiLCJkZWZhdWx0SGVscCIsInNwbGljZSJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQW1CQSxPQUFPQSxDQUFQLE1BQWMsUUFBZDtBQUNBLFNBQVNDLEdBQVQsUUFBb0IsaUJBQXBCO0FBQ0EsT0FBT0MsT0FBUCxNQUFvQixXQUFwQjtBQUNBLE9BQU9DLFlBQVAsTUFBeUIsZUFBekI7QUFFQSxNQUFNQyxJQUFJLEdBQUdDLE9BQU8sQ0FBQ0MsR0FBUixDQUFZQyxhQUFaLEdBQTRCQyxJQUFJLENBQUNDLEtBQUwsQ0FBV0osT0FBTyxDQUFDQyxHQUFSLENBQVlDLGFBQXZCLENBQTVCLEdBQW9FRixPQUFPLENBQUNELElBQVIsQ0FBYU0sS0FBYixFQUFqRjtBQUNBLE1BQU1DLE9BQU8sR0FBRyxJQUFJVCxPQUFKLENBQVksWUFBWixDQUFoQjtBQUVBUyxPQUFPLENBQ0pDLE9BREgsQ0FDV1gsR0FBRyxDQUFDVyxPQURmLEVBRUdDLFdBRkgsQ0FHSSx5REFDQSx5REFKSixFLENBT0E7O0FBQ0FWLFlBQVksQ0FBQ1EsT0FBRCxDQUFaO0FBRUFBLE9BQU8sQ0FDSkcsT0FESCxDQUNXLGdCQURYLEVBRUdELFdBRkgsQ0FFZSxxQ0FGZixFQUdHRSxNQUhILENBR1UsVUFBVUMsT0FBVixFQUFtQjtBQUN6QixRQUFNQyxHQUFHLEdBQUdqQixDQUFDLENBQUNrQixJQUFGLENBQU9QLE9BQU8sQ0FBQ1EsUUFBZixFQUF5QjtBQUFFQyxJQUFBQSxLQUFLLEVBQUVKO0FBQVQsR0FBekIsQ0FBWjs7QUFDQSxNQUFJLENBQUNDLEdBQUwsRUFBVSxPQUFPTixPQUFPLENBQUNVLEtBQVIsQ0FBZSxtQkFBa0JMLE9BQVEsRUFBekMsQ0FBUDtBQUNWQyxFQUFBQSxHQUFHLENBQUNLLElBQUo7QUFDRCxDQVBIO0FBU0FYLE9BQU8sQ0FDSkcsT0FESCxDQUNXLEdBRFgsRUFDZ0IsSUFEaEIsRUFDc0I7QUFBRVMsRUFBQUEsTUFBTSxFQUFFO0FBQVYsQ0FEdEIsRUFFR1IsTUFGSCxDQUVVLFVBQVVFLEdBQVYsRUFBZTtBQUNyQk4sRUFBQUEsT0FBTyxDQUFDVSxLQUFSLENBQWUsbUJBQWtCSixHQUFJLEVBQXJDO0FBQ0QsQ0FKSCxFLENBTUE7O0FBQ0EsTUFBTU8sVUFBVSxHQUFHcEIsSUFBSSxDQUFDLENBQUQsQ0FBSixJQUFXLENBQUNxQixNQUFNLENBQUNyQixJQUFJLENBQUMsQ0FBRCxDQUFKLENBQVEsQ0FBUixDQUFELENBQU4sQ0FBbUJzQixLQUFuQixDQUF5QixXQUF6QixDQUEvQjs7QUFFQSxJQUFJLENBQUNGLFVBQUwsRUFBaUI7QUFDZixNQUFJeEIsQ0FBQyxDQUFDMkIsWUFBRixDQUFldkIsSUFBSSxDQUFDTSxLQUFMLENBQVcsQ0FBWCxDQUFmLEVBQThCLENBQUMsSUFBRCxFQUFPLFFBQVAsQ0FBOUIsRUFBZ0RrQixNQUFwRCxFQUE0RDtBQUMxRGpCLElBQUFBLE9BQU8sQ0FBQ2tCLFdBQVI7QUFDRCxHQUZELE1BRU87QUFDTHpCLElBQUFBLElBQUksQ0FBQzBCLE1BQUwsQ0FBWSxDQUFaLEVBQWUsQ0FBZixFQUFrQixDQUFDLE9BQUQsQ0FBbEI7QUFDRDtBQUNGOztBQUVEbkIsT0FBTyxDQUFDRixLQUFSLENBQWNMLElBQWQiLCJzb3VyY2VSb290IjoiL2dpdC9MZXQtTWUtSW4vc3JjL2NsaSIsInNvdXJjZXNDb250ZW50IjpbIi8qXG4gKiBMaWNlbnNlZCB0byBFbGFzdGljc2VhcmNoIEIuVi4gdW5kZXIgb25lIG9yIG1vcmUgY29udHJpYnV0b3JcbiAqIGxpY2Vuc2UgYWdyZWVtZW50cy4gU2VlIHRoZSBOT1RJQ0UgZmlsZSBkaXN0cmlidXRlZCB3aXRoXG4gKiB0aGlzIHdvcmsgZm9yIGFkZGl0aW9uYWwgaW5mb3JtYXRpb24gcmVnYXJkaW5nIGNvcHlyaWdodFxuICogb3duZXJzaGlwLiBFbGFzdGljc2VhcmNoIEIuVi4gbGljZW5zZXMgdGhpcyBmaWxlIHRvIHlvdSB1bmRlclxuICogdGhlIEFwYWNoZSBMaWNlbnNlLCBWZXJzaW9uIDIuMCAodGhlIFwiTGljZW5zZVwiKTsgeW91IG1heVxuICogbm90IHVzZSB0aGlzIGZpbGUgZXhjZXB0IGluIGNvbXBsaWFuY2Ugd2l0aCB0aGUgTGljZW5zZS5cbiAqIFlvdSBtYXkgb2J0YWluIGEgY29weSBvZiB0aGUgTGljZW5zZSBhdFxuICpcbiAqICAgIGh0dHA6Ly93d3cuYXBhY2hlLm9yZy9saWNlbnNlcy9MSUNFTlNFLTIuMFxuICpcbiAqIFVubGVzcyByZXF1aXJlZCBieSBhcHBsaWNhYmxlIGxhdyBvciBhZ3JlZWQgdG8gaW4gd3JpdGluZyxcbiAqIHNvZnR3YXJlIGRpc3RyaWJ1dGVkIHVuZGVyIHRoZSBMaWNlbnNlIGlzIGRpc3RyaWJ1dGVkIG9uIGFuXG4gKiBcIkFTIElTXCIgQkFTSVMsIFdJVEhPVVQgV0FSUkFOVElFUyBPUiBDT05ESVRJT05TIE9GIEFOWVxuICogS0lORCwgZWl0aGVyIGV4cHJlc3Mgb3IgaW1wbGllZC4gIFNlZSB0aGUgTGljZW5zZSBmb3IgdGhlXG4gKiBzcGVjaWZpYyBsYW5ndWFnZSBnb3Zlcm5pbmcgcGVybWlzc2lvbnMgYW5kIGxpbWl0YXRpb25zXG4gKiB1bmRlciB0aGUgTGljZW5zZS5cbiAqL1xuXG5pbXBvcnQgXyBmcm9tICdsb2Rhc2gnO1xuaW1wb3J0IHsgcGtnIH0gZnJvbSAnLi4vbGVnYWN5L3V0aWxzJztcbmltcG9ydCBDb21tYW5kIGZyb20gJy4vY29tbWFuZCc7XG5pbXBvcnQgc2VydmVDb21tYW5kIGZyb20gJy4vc2VydmUvc2VydmUnO1xuXG5jb25zdCBhcmd2ID0gcHJvY2Vzcy5lbnYua2JuV29ya2VyQXJndiA/IEpTT04ucGFyc2UocHJvY2Vzcy5lbnYua2JuV29ya2VyQXJndikgOiBwcm9jZXNzLmFyZ3Yuc2xpY2UoKTtcbmNvbnN0IHByb2dyYW0gPSBuZXcgQ29tbWFuZCgnYmluL2tpYmFuYScpO1xuXG5wcm9ncmFtXG4gIC52ZXJzaW9uKHBrZy52ZXJzaW9uKVxuICAuZGVzY3JpcHRpb24oXG4gICAgJ0tpYmFuYSBpcyBhbiBvcGVuIHNvdXJjZSAoQXBhY2hlIExpY2Vuc2VkKSwgYnJvd3NlciAnICtcbiAgICAnYmFzZWQgYW5hbHl0aWNzIGFuZCBzZWFyY2ggZGFzaGJvYXJkIGZvciBFbGFzdGljc2VhcmNoLidcbiAgKTtcblxuLy8gYXR0YWNoIGNvbW1hbmRzXG5zZXJ2ZUNvbW1hbmQocHJvZ3JhbSk7XG5cbnByb2dyYW1cbiAgLmNvbW1hbmQoJ2hlbHAgPGNvbW1hbmQ+JylcbiAgLmRlc2NyaXB0aW9uKCdHZXQgdGhlIGhlbHAgZm9yIGEgc3BlY2lmaWMgY29tbWFuZCcpXG4gIC5hY3Rpb24oZnVuY3Rpb24gKGNtZE5hbWUpIHtcbiAgICBjb25zdCBjbWQgPSBfLmZpbmQocHJvZ3JhbS5jb21tYW5kcywgeyBfbmFtZTogY21kTmFtZSB9KTtcbiAgICBpZiAoIWNtZCkgcmV0dXJuIHByb2dyYW0uZXJyb3IoYHVua25vd24gY29tbWFuZCAke2NtZE5hbWV9YCk7XG4gICAgY21kLmhlbHAoKTtcbiAgfSk7XG5cbnByb2dyYW1cbiAgLmNvbW1hbmQoJyonLCBudWxsLCB7IG5vSGVscDogdHJ1ZSB9KVxuICAuYWN0aW9uKGZ1bmN0aW9uIChjbWQpIHtcbiAgICBwcm9ncmFtLmVycm9yKGB1bmtub3duIGNvbW1hbmQgJHtjbWR9YCk7XG4gIH0pO1xuXG4vLyBjaGVjayBmb3Igbm8gY29tbWFuZCBuYW1lXG5jb25zdCBzdWJDb21tYW5kID0gYXJndlsyXSAmJiAhU3RyaW5nKGFyZ3ZbMl1bMF0pLm1hdGNoKC9eLXxeXFwufFxcLy8pO1xuXG5pZiAoIXN1YkNvbW1hbmQpIHtcbiAgaWYgKF8uaW50ZXJzZWN0aW9uKGFyZ3Yuc2xpY2UoMiksIFsnLWgnLCAnLS1oZWxwJ10pLmxlbmd0aCkge1xuICAgIHByb2dyYW0uZGVmYXVsdEhlbHAoKTtcbiAgfSBlbHNlIHtcbiAgICBhcmd2LnNwbGljZSgyLCAwLCBbJ3NlcnZlJ10pO1xuICB9XG59XG5cbnByb2dyYW0ucGFyc2UoYXJndik7XG4iXX0=",
+    "map": {
+      "version": 3,
+      "sources": [
+        "cli.js"
+      ],
+      "names": [
+        "_",
+        "pkg",
+        "Command",
+        "serveCommand",
+        "argv",
+        "process",
+        "env",
+        "kbnWorkerArgv",
+        "JSON",
+        "parse",
+        "slice",
+        "program",
+        "version",
+        "description",
+        "command",
+        "action",
+        "cmdName",
+        "cmd",
+        "find",
+        "commands",
+        "_name",
+        "error",
+        "help",
+        "noHelp",
+        "subCommand",
+        "String",
+        "match",
+        "intersection",
+        "length",
+        "defaultHelp",
+        "splice"
+      ],
+      "mappings": "AAAA;;;;;;;;;;;;;;;;;;AAmBA,OAAOA,CAAP,MAAc,QAAd;AACA,SAASC,GAAT,QAAoB,iBAApB;AACA,OAAOC,OAAP,MAAoB,WAApB;AACA,OAAOC,YAAP,MAAyB,eAAzB;AAEA,MAAMC,IAAI,GAAGC,OAAO,CAACC,GAAR,CAAYC,aAAZ,GAA4BC,IAAI,CAACC,KAAL,CAAWJ,OAAO,CAACC,GAAR,CAAYC,aAAvB,CAA5B,GAAoEF,OAAO,CAACD,IAAR,CAAaM,KAAb,EAAjF;AACA,MAAMC,OAAO,GAAG,IAAIT,OAAJ,CAAY,YAAZ,CAAhB;AAEAS,OAAO,CACJC,OADH,CACWX,GAAG,CAACW,OADf,EAEGC,WAFH,CAGI,yDACA,yDAJJ,E,CAOA;;AACAV,YAAY,CAACQ,OAAD,CAAZ;AAEAA,OAAO,CACJG,OADH,CACW,gBADX,EAEGD,WAFH,CAEe,qCAFf,EAGGE,MAHH,CAGU,UAAUC,OAAV,EAAmB;AACzB,QAAMC,GAAG,GAAGjB,CAAC,CAACkB,IAAF,CAAOP,OAAO,CAACQ,QAAf,EAAyB;AAAEC,IAAAA,KAAK,EAAEJ;AAAT,GAAzB,CAAZ;;AACA,MAAI,CAACC,GAAL,EAAU,OAAON,OAAO,CAACU,KAAR,CAAe,mBAAkBL,OAAQ,EAAzC,CAAP;AACVC,EAAAA,GAAG,CAACK,IAAJ;AACD,CAPH;AASAX,OAAO,CACJG,OADH,CACW,GADX,EACgB,IADhB,EACsB;AAAES,EAAAA,MAAM,EAAE;AAAV,CADtB,EAEGR,MAFH,CAEU,UAAUE,GAAV,EAAe;AACrBN,EAAAA,OAAO,CAACU,KAAR,CAAe,mBAAkBJ,GAAI,EAArC;AACD,CAJH,E,CAMA;;AACA,MAAMO,UAAU,GAAGpB,IAAI,CAAC,CAAD,CAAJ,IAAW,CAACqB,MAAM,CAACrB,IAAI,CAAC,CAAD,CAAJ,CAAQ,CAAR,CAAD,CAAN,CAAmBsB,KAAnB,CAAyB,WAAzB,CAA/B;;AAEA,IAAI,CAACF,UAAL,EAAiB;AACf,MAAIxB,CAAC,CAAC2B,YAAF,CAAevB,IAAI,CAACM,KAAL,CAAW,CAAX,CAAf,EAA8B,CAAC,IAAD,EAAO,QAAP,CAA9B,EAAgDkB,MAApD,EAA4D;AAC1DjB,IAAAA,OAAO,CAACkB,WAAR;AACD,GAFD,MAEO;AACLzB,IAAAA,IAAI,CAAC0B,MAAL,CAAY,CAAZ,EAAe,CAAf,EAAkB,CAAC,OAAD,CAAlB;AACD;AACF;;AAEDnB,OAAO,CAACF,KAAR,CAAcL,IAAd",
+      "sourceRoot": "/git/Let-Me-In/src/cli",
+      "sourcesContent": [
+        "/*\n * Licensed to Elasticsearch B.V. under one or more contributor\n * license agreements. See the NOTICE file distributed with\n * this work for additional information regarding copyright\n * ownership. Elasticsearch B.V. licenses this file to you under\n * the Apache License, Version 2.0 (the \"License\"); you may\n * not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n *\n *    http://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing,\n * software distributed under the License is distributed on an\n * \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\n * KIND, either express or implied.  See the License for the\n * specific language governing permissions and limitations\n * under the License.\n */\n\nimport _ from 'lodash';\nimport { pkg } from '../legacy/utils';\nimport Command from './command';\nimport serveCommand from './serve/serve';\n\nconst argv = process.env.kbnWorkerArgv ? JSON.parse(process.env.kbnWorkerArgv) : process.argv.slice();\nconst program = new Command('bin/kibana');\n\nprogram\n  .version(pkg.version)\n  .description(\n    'Kibana is an open source (Apache Licensed), browser ' +\n    'based analytics and search dashboard for Elasticsearch.'\n  );\n\n// attach commands\nserveCommand(program);\n\nprogram\n  .command('help <command>')\n  .description('Get the help for a specific command')\n  .action(function (cmdName) {\n    const cmd = _.find(program.commands, { _name: cmdName });\n    if (!cmd) return program.error(`unknown command ${cmdName}`);\n    cmd.help();\n  });\n\nprogram\n  .command('*', null, { noHelp: true })\n  .action(function (cmd) {\n    program.error(`unknown command ${cmd}`);\n  });\n\n// check for no command name\nconst subCommand = argv[2] && !String(argv[2][0]).match(/^-|^\\.|\\//);\n\nif (!subCommand) {\n  if (_.intersection(argv.slice(2), ['-h', '--help']).length) {\n    program.defaultHelp();\n  } else {\n    argv.splice(2, 0, ['serve']);\n  }\n}\n\nprogram.parse(argv);\n"
+      ]
+    },
+    "sourceType": "module",
+    "mtime": 1572536290571
+  }
+}

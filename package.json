@@ -1,11 +1,26 @@
 {
   "name": "let-me-in",
+  "scripts": {
+    "start": "node --trace-warnings --trace-deprecation scripts/let_me_in --dev"
+  },
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/shoustech/Let-Me-In.git",
   "author": "Shawn Houston",
   "license": "apache2",
   "dependencies": {
-    "hapi": "^18.1.0"
+    "hapi": "^18.1.0",
+    "lodash": "^4.17.15",
+    "regenerator-runtime": "^0.13.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/register": "^7.7.7",
+    "core-js": "^3.6.1",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.41.5",
+    "webpack-dashboard": "^3.2.0",
+    "webpack-dev-middleware": "^3.7.2",
+    "webpack-hot-middleware": "^2.25.0"
   }
 }
